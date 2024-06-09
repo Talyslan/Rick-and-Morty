@@ -1,0 +1,21 @@
+:root {
+    --clr-white: #EBF3EC;
+    --clr-black: #201D25;
+    --clr-green: #2FEC64;
+    --clr-green-dark: #0F3726;
+    --clr-gray: #4A4545;
+    --clr-gray-lowopac: #3A3A3A;
+    --clr-gray-highopac: #3A3A3A;
+}
+
+body {
+    background: var(--clr-black);
+}
+
+body,
+a,
+button,
+input {
+    font-family: "Josefin Sans", sans-serif;
+    /* font-family: "Lalezar", system-ui; */
+}
