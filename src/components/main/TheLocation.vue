@@ -1,5 +1,6 @@
 <!-- The Location HTML-->
 <template>
+    <section class="location"></section>
 </template>
 
 <!-- The Location Script -->

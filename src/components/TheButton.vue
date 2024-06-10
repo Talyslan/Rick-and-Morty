@@ -34,8 +34,23 @@ export default {
 
 <!-- Button Style  -->
 <style>
-.txt-white { color: var(--clr-white); }
-.txt-black { color: var(--clr-black); }
+.txt-white,
+.txt-white svg,
+.txt-white svg rect { 
+    color: var(--clr-white); 
+    stroke: var(--clr-white);
+}
+.txt-white svg path { fill: var(--clr-white); }
+
+.txt-black,
+.txt-black svg,
+.txt-black svg rect { 
+    color: var(--clr-black);
+    stroke: var(--clr-black); 
+}
+.txt-black svg path { fill: var(--clr-black); }
+
+
 .bg-white { background: var(--clr-white); }
 .bg-black { background: var(--clr-black); }
 .bg-green { background: var(--clr-green); }

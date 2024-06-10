@@ -4,6 +4,7 @@
     <TheHero />
     <TheInitial />
     <TheCharacters />
+    <TheEpisodes />
     <TheFooter />
 </template>
 
@@ -13,6 +14,7 @@ import TheNav from '../components/TheNav.vue';
 import TheHero from '../components/main/TheHero.vue';
 import TheInitial from '../components/main/TheInitial.vue';
 import TheCharacters from '../components/main/TheCharacters.vue';
+import TheEpisodes from '../components/main/TheEpisodes.vue';
 import TheFooter from '../components/TheFooter.vue';
 
 const componentsList = {
@@ -20,6 +22,7 @@ const componentsList = {
     TheHero,
     TheInitial,
     TheCharacters,
+    TheEpisodes,
     TheFooter 
 }
 

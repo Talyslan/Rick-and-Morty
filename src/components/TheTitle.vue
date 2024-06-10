@@ -1,6 +1,6 @@
 <!-- The Title HTML -->
 <template>
-    <div class="title">
+    <div :class="['title', dir, vertDown]">
         <h2 :class="color"> {{ title }}<strong>{{ point }}</strong> </h2>
         <img :src="img" :alt="altText">
     </div>
@@ -34,6 +34,16 @@ export default {
             type: String,
             required: false,
             default: 'black'
+        },
+        dir: {
+            type: String,
+            required: false,
+            default: 'left'
+        },
+        vertDown: {
+            type: String,
+            required: false,
+            default: ''
         }
     }
 }
@@ -48,6 +58,8 @@ export default {
 
 .title h2 {
     font-size: 4rem;
+    z-index: 2;
+    position: relative;
 }
 
 .title h2 strong {
@@ -58,8 +70,12 @@ export default {
     position: absolute;
     left: -2em;
     bottom: 0em;
-    z-index: -1;
+    z-index: 1;
 }
+
+.left.title img { left: -2em; }
+.right.title img { left: 13em; }
+.vertDown.title img { bottom: -2em; }
 
 .black { color: var(--clr-black); }
 .white { color: var(--clr-white); }
