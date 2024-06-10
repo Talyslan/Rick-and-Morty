@@ -16,6 +16,11 @@ body,
 a,
 button,
 input {
-    font-family: "Josefin Sans", sans-serif;
     /* font-family: "Lalezar", system-ui; */
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: normal;
+}
+
+section {
+    padding: 3em 5em 5em 5em;
 }
