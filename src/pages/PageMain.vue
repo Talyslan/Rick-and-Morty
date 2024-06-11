@@ -6,6 +6,7 @@
     <TheCharacters />
     <TheEpisodes />
     <TheLocation />
+    <TheProject />
     <TheFooter />
 </template>
 
@@ -17,6 +18,7 @@ import TheInitial from '../components/main/TheInitial.vue';
 import TheCharacters from '../components/main/TheCharacters.vue';
 import TheEpisodes from '../components/main/TheEpisodes.vue';
 import TheLocation from '../components/main/TheLocation.vue';
+import TheProject from '../components/main/TheProject.vue';
 import TheFooter from '../components/TheFooter.vue';
 
 const componentsList = {
@@ -26,6 +28,7 @@ const componentsList = {
     TheCharacters,
     TheEpisodes,
     TheLocation,
+    TheProject,
     TheFooter 
 }
 
