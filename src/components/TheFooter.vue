@@ -1,7 +1,7 @@
 <!-- Footer HTML -->
 <template>
     <footer>
-        <img :src="currentLogo" alt="Rick and Morty's Logo" />
+        <TheLogo />
 
         <span>© 2024. All rights reserved.</span>
 
@@ -13,26 +13,12 @@
 
 <!-- Footer Script -->
 <script>
-// Logos
-import url_logoDark from '@/assets/logos/logo-white.svg';
-import url_logoWhite from '@/assets/logos/logo-dark.svg';
+// Components
+import TheLogo from './TheLogo.vue';
 
 export default {
     name: "TheFooter",
-    data() {
-        return {
-            isDarkMode: true,
-            logoImg: {
-                dark: url_logoDark,
-                white: url_logoWhite
-            }
-        };
-    },
-    computed: {
-        currentLogo() {
-            return this.isDarkMode? this.logoImg.dark : this.logoImg.white;
-        }
-    }
+    components: { TheLogo }
 }
 
 </script>
@@ -45,7 +31,8 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: .5em 2em
+    width: 100%;
+    padding: .5em 2em;
 }
 
 footer span {

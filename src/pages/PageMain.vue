@@ -12,6 +12,7 @@
 
 <!-- Main Page Script -->
 <script>
+// Components
 import TheNav from '../components/TheNav.vue';
 import TheHero from '../components/main/TheHero.vue';
 import TheInitial from '../components/main/TheInitial.vue';

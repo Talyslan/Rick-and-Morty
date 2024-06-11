@@ -2,7 +2,7 @@
 <template>
     <header>
         <nav>
-            <img :src="currentLogo" :alt="logo.alt" />
+            <TheLogo />
             <div class="right-side">
                 <ul>
                     <li v-for="(href, link) in links" :key="link">
@@ -17,25 +17,17 @@
 
 <!-- Nav Script -->
 <script>
-// Logos
-import url_logoDark from '@/assets/logos/logo-white.svg';
-import url_logoWhite from '@/assets/logos/logo-dark.svg';
-// Themes
+// Components
+import TheLogo from '../components/TheLogo.vue';
+// Img
 import url_iconDark from '@/assets/themes/theme-dark.svg';
 import url_iconWhite from '@/assets/themes/theme-white.svg';
 
 export default {
     name: 'TheNav',
+    components: { TheLogo },
     data() {
         return {
-            isDarkMode: true,
-            logo: {
-                img: {
-                    dark: url_logoDark, 
-                    white: url_logoWhite
-                },
-                alt: "Rick and Morty's Logo"
-            },
             links: {
                 'Episodes': '#', 
                 'Characters': '#', 
@@ -49,9 +41,6 @@ export default {
         };
     },
     computed: {
-        currentLogo() {
-            return this.isDarkMode? this.logo.img.dark : this.logo.img.white;
-        },
         currentTheme() {
             return this.isDarkMode? this.themeIcon.dark : this.themeIcon.white;
         }
