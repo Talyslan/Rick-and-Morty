@@ -5,14 +5,14 @@
             title="Episodes" 
             point="." 
             color="black" 
-            :img="episodesIcon" 
+            img="/icon/icon-episodes.svg" 
             altText="Title of Episodes Section"
             dir="right"
             vertDown="vertDown"
         />
 
         <div class="episodes__content">
-            <img src="@/assets/images/img-episodes.png" alt="">
+            <img src="/images/img-episodes.png" alt="">
 
             <div class="right-side">
                 <p>
@@ -29,17 +29,12 @@
 // Components
 import TheTitle from '../TheTitle.vue';
 import TheButton from '../TheButton.vue';
-// Img
-import episodesIcon from '@/assets/icon/icon-episodes.svg';
 
 export default {
     name: "TheEpisodes",
     components: {
         TheTitle,
         TheButton
-    },
-    data() {
-        return { episodesIcon }
     }
 }
 

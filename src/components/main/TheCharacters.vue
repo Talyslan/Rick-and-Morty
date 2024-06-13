@@ -5,7 +5,7 @@
             title="Characters" 
             point="." 
             color="white" 
-            :img="characterIcon" 
+            img="/icon/icon-characters.svg" 
             altText="Title of Character Section" 
         /> 
 
@@ -24,7 +24,7 @@
 
 <!-- The Caracters Script -->
 <script>
-import characterIcon from '@/assets/icon/icon-characters.svg';
+// import characterIcon from '/icon/icon-characters.svg';
 // Components
 import TheTitle from '../TheTitle.vue';
 import TheButton from '../TheButton.vue';
@@ -41,10 +41,7 @@ export default {
         TheButton
     },
     data() {
-        return {
-            characterIcon,
-            listCharacters: []
-        };
+        return { listCharacters: [] };
     },
     async created() {
         try {

@@ -28,6 +28,7 @@ export default {
     components: { TheLogo },
     data() {
         return {
+            isDarkMode: true,
             links: {
                 'Episodes': '#', 
                 'Characters': '#', 

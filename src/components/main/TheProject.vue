@@ -5,7 +5,7 @@
             title="Acompanhe e Assista" 
             point="!" 
             color="black" 
-            :img="projectIcon" 
+            img="/icon/icon-project.svg" 
             altText="Title of Project Section"
         />
 
@@ -18,7 +18,7 @@
             </p>
         </div>
 
-        <img src="@/assets/images/img-project.png" alt="">
+        <img src="/images/img-project.png" alt="">
     </section>
 </template>
 
@@ -26,15 +26,10 @@
 <script>
 // COmponents
 import TheTitle  from '../TheTitle.vue';
-// Img
-import projectIcon from '@/assets/icon/icon-project.svg';
 
 export default {
     name: "TheProject",
-    components: { TheTitle },
-    data() {
-        return { projectIcon }
-    }
+    components: { TheTitle }
 }
 
 </script>

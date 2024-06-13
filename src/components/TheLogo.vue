@@ -42,6 +42,6 @@ export default {
     cursor: pointer;
     transition: 0.3s;
 }
-.logo img:hover { transform: scale(1.05); }
+.logo img:hover { transform: scale(1.01); }
 
 </style>

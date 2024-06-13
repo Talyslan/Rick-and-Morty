@@ -3,14 +3,13 @@
     <section class="hero">
         <img :src="img.title.desktop" alt="Rick and Morty's Title Desktop">
 
-        <img :src="img.rickAndMorty" alt="Rick and Morty Hero Image">
+        <img src="/images/hero-background.png" alt="Rick and Morty Hero Image">
     </section>
 </template>
 
 <!-- Header Script -->
 <script>
 import titleDesktop from '@/assets/title/title-desktop.png';
-import heroImg from '@/assets/images/hero-background.png';
 
 export default {
     name: 'TheHero',
@@ -19,8 +18,7 @@ export default {
             img: {
                 title: {
                     desktop: titleDesktop
-                },
-                rickAndMorty: heroImg
+                }
             }
         };
     }
