@@ -1,4 +1,4 @@
-<h1 align="center"> OptimusTech - Landing Page </h1>
+<h1 align="center"> Rick and Morty </h1>
 
 <img height="500" src="" alt="Layout no Computador" />
 <img height="500" src="" alt="Layout no Celular" />
