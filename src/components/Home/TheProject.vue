@@ -5,7 +5,7 @@
             title="Acompanhe e Assista" 
             point="!" 
             color="black" 
-            img="/icon/icon-project.svg" 
+            img="@/assets/icon/icon-project.svg" 
             altText="Title of Project Section"
         />
 
@@ -25,7 +25,7 @@
 <!-- The Project Script -->
 <script>
 // COmponents
-import TheTitle  from '../TheTitle.vue';
+import TheTitle  from './TheTitle.vue';
 
 export default {
     name: "TheProject",

@@ -13,7 +13,7 @@
             </div>
         </div>
 
-        <img src="/arrows/arrow-down.svg" alt="">
+        <img src="@/assets/arrows/arrow-down.svg" alt="">
     </section>
 </template>
 

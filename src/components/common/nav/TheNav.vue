@@ -18,7 +18,7 @@
 <!-- Nav Script -->
 <script>
 // Components
-import TheLogo from '../components/TheLogo.vue';
+import TheLogo from '../logo/TheLogo.vue';
 // Img
 import url_iconDark from '@/assets/themes/theme-dark.svg';
 import url_iconWhite from '@/assets/themes/theme-white.svg';
@@ -87,4 +87,4 @@ nav img:last-child:hover { transform: scale(1.05); }
 nav img:last-child {
     transition: 0.3s;
 }
-</style>
+</style>./TheLogo.vue

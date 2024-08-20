@@ -5,17 +5,13 @@
             <img src="/images/img-location.png" alt="">
         </div>
         <div class="right-side">
-            <TheTitle 
-                title="Location" 
-                point="." 
-                color="white" 
-                img="/icon/icon-location.svg" 
-                altText="Title of Episodes Section"
-                dir="right"
-            />
+            <TheTitle title="Location" point="." color="white" img="/icon/icon-location.svg"
+                altText="Title of Episodes Section" dir="right" />
 
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat libero fugit rem eum architecto? Harum dignissimos voluptas ex, voluptatibus, odio at unde, voluptatum nobis deserunt ea sed laborum sit placeat.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat libero fugit rem eum architecto? Harum
+                dignissimos voluptas ex, voluptatibus, odio at unde, voluptatum nobis deserunt ea sed laborum sit
+                placeat.
             </p>
 
             <TheButton text="See more!" bg="bg-white" txt="txt-black" />
@@ -26,13 +22,13 @@
 <!-- The Location Script -->
 <script>
 // Components
-import TheTitle from '../TheTitle.vue';
-import TheButton from '../TheButton.vue';
+import TheTitle from './TheTitle.vue';
+import TheButton from '../common/button/TheButton.vue';
 
 export default {
     name: "TheLocation",
-    components: { 
-        TheTitle, 
+    components: {
+        TheTitle,
         TheButton
     }
 }
@@ -41,7 +37,6 @@ export default {
 
 <!-- The Location Style -->
 <style>
-
 .location {
     color: var(--clr-white);
     display: flex;
@@ -69,6 +64,6 @@ export default {
 
 .location .right-side p {
     width: 30ch;
-    font-size: 1.5rem;}
-
-</style>
+    font-size: 1.5rem;
+}
+</style>../common/TheButton.vue

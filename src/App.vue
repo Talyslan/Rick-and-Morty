@@ -1,16 +1,21 @@
 <!-- App HTML -->
 <template>
-  <PageMain />
+  <TheNav />
+  <RouterView />
+  <TheFooter />
 </template>
 
 <!-- App Script -->
 <script>
-import PageMain from './pages/PageMain.vue';
+import TheFooter from './components/common/footer/TheFooter.vue';
+import TheNav from './components/common/nav/TheNav.vue';
+
 
 export default {
   name: 'App',
   components: {
-    PageMain
+    TheNav,
+    TheFooter
   }
 }
 </script>
@@ -21,8 +26,11 @@ export default {
   /* font-family: Avenir, Helvetica, Arial, sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* text-align: center; */
-  /* color: #2c3e50; */
-  /* margin-top: 60px; */
+}
+
+#app h1 {
+  text-align: center;
+  color: #ffff;
+  text-transform: uppercase;
 }
 </style>
