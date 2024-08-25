@@ -3,7 +3,7 @@
     <section class="hero">
         <img :src="img.title.desktop" alt="Rick and Morty's Title Desktop">
 
-        <img src="/images/background.png" alt="Rick and Morty Hero Image">
+        <img src="/images/hero-background.png" alt="Rick and Morty Hero Image">
     </section>
 </template>
 
