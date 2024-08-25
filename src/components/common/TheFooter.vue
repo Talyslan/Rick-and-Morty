@@ -14,7 +14,7 @@
 <!-- Footer Script -->
 <script>
 // Components
-import TheLogo from '../logo/TheLogo.vue';
+import TheLogo from './TheLogo.vue';
 
 export default {
     name: "TheFooter",
@@ -25,7 +25,6 @@ export default {
 
 <!-- Footer Style -->
 <style>
-
 footer {
     background: var(--clr-green-dark);
     display: flex;
@@ -33,8 +32,6 @@ footer {
     justify-content: space-between;
     width: 100%;
     padding: .5em 2em;
-    position: absolute;
-    bottom: 0;
 }
 
 footer span {
@@ -44,5 +41,4 @@ footer span {
 footer a img {
     width: 2em;
 }
-
 </style>

@@ -1,11 +1,11 @@
 <!-- The Project HTML-->
 <template>
-    <section class="project">
+    <section class="project" id="project">
         <TheTitle 
             title="Acompanhe e Assista" 
             point="!" 
             color="black" 
-            img="@/assets/icon/icon-project.svg" 
+            :img="projectIcon" 
             altText="Title of Project Section"
         />
 
@@ -18,18 +18,26 @@
             </p>
         </div>
 
-        <img src="/images/img-project.png" alt="">
+        <img src="/images/project.png" alt="Project image">
     </section>
 </template>
 
 <!-- The Project Script -->
 <script>
+import projectIcon from '@/assets/icon/icon-project.svg';
 // COmponents
 import TheTitle  from './TheTitle.vue';
 
 export default {
     name: "TheProject",
-    components: { TheTitle }
+    components: { 
+        TheTitle 
+    },
+    data() {
+        return {
+            projectIcon
+        }
+    }
 }
 
 </script>
@@ -49,7 +57,7 @@ export default {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 90%;
+    width: 80%;
 }
 
 .project .text p {

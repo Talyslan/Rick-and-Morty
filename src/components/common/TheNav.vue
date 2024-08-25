@@ -18,21 +18,23 @@
 <!-- Nav Script -->
 <script>
 // Components
-import TheLogo from '../logo/TheLogo.vue';
+import TheLogo from './TheLogo.vue';
 // Img
 import url_iconDark from '@/assets/themes/theme-dark.svg';
 import url_iconWhite from '@/assets/themes/theme-white.svg';
 
 export default {
     name: 'TheNav',
-    components: { TheLogo },
+    components: {
+        TheLogo
+    },
     data() {
         return {
             isDarkMode: true,
             links: {
-                'Episodes': '#', 
-                'Characters': '#', 
-                'Location': '#'
+                'Characters': '#characters',
+                'Episodes': '#episodes',
+                'Location': '#location'
             },
             themeIcon: {
                 dark: url_iconDark,
@@ -43,7 +45,7 @@ export default {
     },
     computed: {
         currentTheme() {
-            return this.isDarkMode? this.themeIcon.dark : this.themeIcon.white;
+            return this.isDarkMode ? this.themeIcon.dark : this.themeIcon.white;
         }
     }
 }
@@ -60,6 +62,13 @@ ul {
     align-items: center;
 }
 
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
 header,
 nav {
     background: var(--clr-green-dark);
@@ -71,17 +80,29 @@ nav {
     padding: .5em 2em;
 }
 
-.right-side { gap: 2em; }
+.right-side {
+    gap: 2em;
+}
 
-.right-side ul { gap: 3em; }
+.right-side ul {
+    gap: 3em;
+}
 
-.right-side ul li a { color: var(--clr-white); }
+.right-side ul li a {
+    color: var(--clr-white);
+}
 
-.right-side ul li a:hover { color: var(--clr-green); }
+.right-side ul li a:hover {
+    color: var(--clr-green);
+}
 
-nav img:last-child { cursor: pointer; }
+nav img:last-child {
+    cursor: pointer;
+}
 
-nav img:last-child:hover { transform: scale(1.05); }
+nav img:last-child:hover {
+    transform: scale(1.05);
+}
 
 .right-side ul li a,
 nav img:last-child {

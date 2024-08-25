@@ -1,12 +1,17 @@
 <!-- The Location HTML-->
 <template>
-    <section class="location">
+    <section class="location" id="location">
         <div class="left-side">
-            <img src="/images/img-location.png" alt="">
+            <img src="/images/location.png" alt="Location image">
         </div>
         <div class="right-side">
-            <TheTitle title="Location" point="." color="white" img="/icon/icon-location.svg"
-                altText="Title of Episodes Section" dir="right" />
+            <TheTitle 
+                title="Location" 
+                point="." 
+                color="white" 
+                :img="locationIcon"
+                altText="Title of Episodes Section" 
+                dir="right" />
 
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat libero fugit rem eum architecto? Harum
@@ -21,15 +26,21 @@
 
 <!-- The Location Script -->
 <script>
+import locationIcon from '@/assets/icon/icon-location.svg';
 // Components
 import TheTitle from './TheTitle.vue';
-import TheButton from '../common/button/TheButton.vue';
+import TheButton from '../common/TheButton.vue';
 
 export default {
     name: "TheLocation",
     components: {
         TheTitle,
         TheButton
+    },
+    data() {
+        return {
+            locationIcon
+        }
     }
 }
 
@@ -46,7 +57,6 @@ export default {
 
 .location .left-side {
     width: 50%;
-    z-index: -1;
 }
 
 .location .left-side img {
@@ -59,11 +69,12 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: start;
-    justify-content: center
+    justify-content: center;
+    z-index: 1;
 }
 
 .location .right-side p {
     width: 30ch;
     font-size: 1.5rem;
 }
-</style>../common/TheButton.vue
+</style>

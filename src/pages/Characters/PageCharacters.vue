@@ -1,11 +1,11 @@
-<!-- PageCharacters -->
+<!-- PageCharacters HTML -->
 <template>
     <div>
         <h1>{{ title }}</h1>
     </div>
 </template>
 
-<!-- PageCharacters -->
+<!-- PageCharacters Script -->
 <script>
 
 export default {
@@ -19,5 +19,5 @@ export default {
 
 </script>
 
-<!-- PageCharacters -->
+<!-- PageCharacters Style -->
 <style></style>

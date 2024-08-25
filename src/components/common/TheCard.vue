@@ -3,7 +3,10 @@
     <div class="card">
         <div 
             class="card__image" 
-            :style="{ backgroundImage: `url(${ img })` }">
+            :style="{ 
+                backgroundImage: `url(${ img })` 
+            }"
+        >
         </div>          
 
         <div class="card__text">
@@ -55,6 +58,11 @@ a {
     position: relative;
     height: 380px;
     width: 300px;
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
 }
 
 /* Image */
@@ -111,6 +119,8 @@ a {
 
 .card__text a {
     font-size: .9rem;
+    color: var(--clr-green);
+    text-decoration: underline;
 }
 
 .card__text a::after {

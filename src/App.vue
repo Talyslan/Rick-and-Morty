@@ -7,8 +7,8 @@
 
 <!-- App Script -->
 <script>
-import TheFooter from './components/common/footer/TheFooter.vue';
-import TheNav from './components/common/nav/TheNav.vue';
+import TheFooter from './components/common/TheFooter.vue';
+import TheNav from './components/common/TheNav.vue';
 
 
 export default {
