@@ -50,8 +50,8 @@ git clone --depth 1 https://github.com/Talyslan/.git
 git clone https://github.com/Talyslan/.git
 ```
 
-- Link Figma: 
-<a href="https://www.figma.com/design/1zoaZnbuxVuQytd05ZZdWU/Rick-and-Morty-%7C-Web?node-id=0-1&t=2TonGks3EnOEjBr3-0">Link do Figma</a>
+## Link Figma 
+<a href="https://www.figma.com/design/1zoaZnbuxVuQytd05ZZdWU/Rick-and-Morty-%7C-Web?node-id=0-1&t=2TonGks3EnOEjBr3-0">Clique aqui para ir para o FIGMA</a>.
 
 ## 🚀 Technologies Used
 
