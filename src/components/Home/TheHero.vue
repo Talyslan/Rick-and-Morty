@@ -3,7 +3,7 @@
     <section class="hero">
         <img :src="img.title.desktop" alt="Rick and Morty's Title Desktop">
 
-        <img src="/images/hero-background.png" alt="Rick and Morty Hero Image">
+        <img src="/images/background.png" alt="Rick and Morty Hero Image">
     </section>
 </template>
 
@@ -33,7 +33,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 0 3em 0;
+    padding: 5em 0 3em 0;
 }
 
 .hero img:nth-child(1) { width: 50%; }

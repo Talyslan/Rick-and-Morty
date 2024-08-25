@@ -6,7 +6,7 @@
         <span>© 2024. All rights reserved.</span>
 
         <a href="https://github.com/Talyslan/">
-            <img src="github.svg" alt="GitHub's Icon" />
+            <img src="/github.svg" alt="GitHub's Icon" />
         </a>
     </footer>
 </template>
@@ -25,7 +25,6 @@ export default {
 
 <!-- Footer Style -->
 <style>
-
 footer {
     background: var(--clr-green-dark);
     display: flex;
@@ -42,5 +41,4 @@ footer span {
 footer a img {
     width: 2em;
 }
-
 </style>

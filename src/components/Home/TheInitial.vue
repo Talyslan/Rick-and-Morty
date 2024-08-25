@@ -3,7 +3,7 @@
     <section class="initial">
         <div class="initial__banner">
             <h1>Rick <strong>and</strong> Morty</h1>
-            <img src="/images/img-initial.png" alt="">
+            <img src="/images/initial.png" alt="Initial image">
         </div>
 
         <div class="initial__text">
@@ -13,7 +13,7 @@
             </div>
         </div>
 
-        <img src="/arrows/arrow-down.svg" alt="">
+        <img src="@/assets/arrows/arrow-down.svg" alt="">
     </section>
 </template>
 

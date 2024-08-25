@@ -1,37 +1,38 @@
 <!-- The Caracters HTML-->
 <template>
-    <section class="characters">
+    <section class="characters" id="characters">
         <TheTitle 
             title="Characters" 
             point="." 
             color="white" 
-            img="/icon/icon-characters.svg" 
+            :img="characterIcon"
             altText="Title of Character Section" 
-        /> 
+        />
 
         <div class="box">
-            <TheCard v-for="obj in listCharacters" :key="obj.id"
-                :img="obj.image"
-                :name="obj.name"
-                :status="obj.status"
-                :species="obj.species"
+            <TheCard v-for="character in listCharacters" 
+                :key="character.id" 
+                :img="character.image" 
+                :name="character.name" 
+                :status="character.status"
+                :species="character.species" 
             />
         </div>
-        
+
         <TheButton text="See more!" bg="bg-green" txt="txt-black" />
     </section>
 </template>
 
 <!-- The Caracters Script -->
 <script>
-// import characterIcon from '/icon/icon-characters.svg';
+import characterIcon from '@/assets/icon/icon-characters.svg';
 // Components
-import TheTitle from '../TheTitle.vue';
-import TheButton from '../TheButton.vue';
-import TheCard from '../TheCard.vue';
+import TheTitle from './TheTitle.vue';
+import TheButton from '../common/TheButton.vue';
+import TheCard from '../common/TheCard.vue';
 
-const apiUrl = 'https://rickandmortyapi.com/api/'
-const endpointCharacter = 'character'
+const apiUrl = 'https://rickandmortyapi.com/api/';
+const endpointCharacter = 'character';
 
 export default {
     name: "TheCharacters",
@@ -41,27 +42,30 @@ export default {
         TheButton
     },
     data() {
-        return { listCharacters: [] };
+        return { 
+            listCharacters: [],
+            characterIcon
+        };
     },
     async created() {
         try {
             const response = await fetch(apiUrl + endpointCharacter);
             const data = await response.json();
             this.listCharacters = this.action(data.results, 6);
-            
+
         } catch (error) {
-            console.log(error.message)
+            console.log(error.message);
         }
     },
     methods: {
         action(data, qntdItems) {
-            const list = []
+            const list = [];
 
             for (let index = 0; index < qntdItems; index++) {
                 list.push(data[index]);
             }
 
-            return list
+            return list;
         }
     }
 }
@@ -70,7 +74,6 @@ export default {
 
 <!-- The Caracters Style -->
 <style>
-
 .characters {
     display: flex;
     flex-direction: column;

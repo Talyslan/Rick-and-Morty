@@ -1,8 +1,10 @@
 <!-- The Title HTML -->
 <template>
     <div :class="['title', dir, vertDown]">
-        <h2 :class="color"> {{ title }}<strong>{{ point }}</strong> </h2>
-        <img :src="img" :alt="altText">
+        <h2 :class="color"> 
+            {{ title }}<strong>{{ point }}</strong> 
+        </h2>
+        <img :src="img" :alt="altText" />
     </div>
 </template>
 

@@ -8,14 +8,11 @@
     --clr-gray-highopac: #3A3A3A;
 }
 
-body,
-#app {
+body {
     background: var(--clr-black);
-    min-height: 100vh;
 }
 
 body,
-#app,
 a,
 button,
 input {
@@ -25,5 +22,5 @@ input {
 }
 
 section {
-    padding: 5em 5em 5em 5em;
+    padding: 3em 5em 5em 5em;
 }

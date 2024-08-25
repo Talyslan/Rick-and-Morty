@@ -1,22 +1,24 @@
 <!-- The Episodes HTML-->
 <template>
-    <section class="episodes">
+    <section class="episodes" id="episodes">
         <TheTitle 
             title="Episodes" 
             point="." 
             color="black" 
-            img="/icon/icon-episodes.svg" 
-            altText="Title of Episodes Section"
-            dir="right"
-            vertDown="vertDown"
+            :img="episodesIcon"
+            altText="Title of Episodes Section" 
+            dir="right" 
+            vertDown="vertDown" 
         />
 
         <div class="episodes__content">
-            <img src="/images/img-episodes.png" alt="">
+            <img src="/images/episodes.png" alt="Episodes image">
 
             <div class="right-side">
                 <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae ut dignissimos odit voluptates laudantium nemo aut unde. Aliquid alias maxime, doloremque minima reiciendis ullam ipsam iure beatae aperiam eveniet blanditiis?
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae ut dignissimos odit voluptates
+                    laudantium nemo aut unde. Aliquid alias maxime, doloremque minima reiciendis ullam ipsam iure beatae
+                    aperiam eveniet blanditiis?
                 </p>
                 <TheButton text="See more!" bg="bg-black" txt="txt-white" />
             </div>
@@ -26,15 +28,21 @@
 
 <!-- The Episodes Script -->
 <script>
+import episodesIcon from '@/assets/icon/icon-episodes.svg';
 // Components
-import TheTitle from '../TheTitle.vue';
-import TheButton from '../TheButton.vue';
+import TheTitle from './TheTitle.vue';
+import TheButton from '../common/TheButton.vue';
 
 export default {
     name: "TheEpisodes",
     components: {
         TheTitle,
         TheButton
+    },
+    data() {
+        return {
+            episodesIcon
+        }
     }
 }
 
@@ -42,7 +50,6 @@ export default {
 
 <!-- The Episodes Style -->
 <style>
-
 .episodes {
     background: var(--clr-white);
 }
@@ -59,7 +66,7 @@ export default {
     width: 50%;
     filter: drop-shadow(0 2em 0 var(--clr-green));
 }
-    
+
 .episodes__content .right-side {
     width: 50%;
     display: flex;
@@ -71,5 +78,4 @@ export default {
     width: 30ch;
     font-size: 1.5rem;
 }
-
 </style>
