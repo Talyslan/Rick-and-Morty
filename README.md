@@ -1,7 +1,9 @@
 <h1 align="center"> Rick and Morty </h1>
 
+<!--
 <img height="500" src="" alt="Layout no Computador" />
 <img height="500" src="" alt="Layout no Celular" />
+-->
 
 ## 🛸 O Projeto
 <img height="200" src="https://github.com/Talyslan/rick-and-morty/assets/78499700/51ae8876-1638-49d6-95fc-2374255b43a7" alt="gif" />
@@ -16,7 +18,7 @@
 # Instale as dependências e rode localmente
 ```
 npm install
-npm run serve
+npm run dev
 ```
 <!-- 
 ### Compiles and minifies for production
@@ -53,9 +55,8 @@ git clone https://github.com/Talyslan/.git
 
 ## 🚀 Technologies Used
 
-A criação deste site utiliza as tecnologias básicas para uma página web:
-
 - Vue.js
+- Vue-router
 - HTML
 - CSS
 - JavaScript
