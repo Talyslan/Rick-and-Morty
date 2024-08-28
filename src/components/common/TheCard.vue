@@ -48,7 +48,7 @@ export default {
 </script>
 
 <!-- The Card Style -->
-<style>
+<style scoped>
 .card,
 a {
     color: var(--clr-white);
@@ -56,7 +56,7 @@ a {
 
 .card {
     position: relative;
-    height: 380px;
+    height: 300px;
     width: 300px;
     transition: 0.2s;
 }

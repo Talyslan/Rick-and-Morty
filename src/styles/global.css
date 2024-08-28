@@ -6,11 +6,32 @@
     --clr-gray: #4A4545;
     --clr-gray-lowopac: #3A3A3A;
     --clr-gray-highopac: #3A3A3A;
+    /* light-theme */
+    --nav-text-clr-hv: var(--clr-green-dark);
+
+    --border: var(--clr-black);
+    --text-clr: var(--clr-black);
+
+    --bg: var(--clr-white);
+    --bg-body: var(--clr-white);
+    --bg-btn: var(--clr-black);
+}
+
+/* dark-theme */
+[theme="dark"] {
+    --nav-text-clr-hv: var(--clr-green);
+    
+    --border: transparent;
+    --text-clr: var(--clr-white);
+    
+    --bg-body: var(--clr-black);
+    --bg: var(--clr-green-dark);
+    --bg-btn: var(--clr-white);
 }
 
 body,
 #app {
-    background: var(--clr-black);
+    background: var(--bg-body);
     min-height: 100vh;
 }
 

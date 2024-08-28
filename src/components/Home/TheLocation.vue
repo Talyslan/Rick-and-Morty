@@ -11,7 +11,8 @@
                 color="white" 
                 :img="locationIcon"
                 altText="Title of Episodes Section" 
-                dir="right" />
+                dir="right" 
+            />
 
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat libero fugit rem eum architecto? Harum
@@ -19,7 +20,7 @@
                 placeat.
             </p>
 
-            <TheButton text="See more!" bg="bg-white" txt="txt-black" />
+            <TheButton text="See more!" />
         </div>
     </section>
 </template>
@@ -47,9 +48,9 @@ export default {
 </script>
 
 <!-- The Location Style -->
-<style>
+<style scoped>
 .location {
-    color: var(--clr-white);
+    color: var(--section-bg);
     display: flex;
     justify-content: space-around;
     padding-left: 0;
@@ -76,5 +77,6 @@ export default {
 .location .right-side p {
     width: 30ch;
     font-size: 1.5rem;
+    color: var(--text-clr);
 }
 </style>

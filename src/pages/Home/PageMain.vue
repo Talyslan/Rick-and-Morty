@@ -32,8 +32,7 @@ export default {
         TheProject
     }
 }
-
 </script>
 
 <!-- PageMain style -->
-<style></style>
+<!-- <style scoped></style> -->

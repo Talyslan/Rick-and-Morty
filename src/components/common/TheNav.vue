@@ -9,7 +9,11 @@
                         <a :href="href" v-if="link"> {{ link }} </a>
                     </li>
                 </ul>
-                <img :src="currentTheme" :alt="themeIcon.alt" />
+                <img 
+                    :src="currentTheme" 
+                    :alt="themeIcon.alt"
+                    @click="toggleTheme()" 
+                />
             </div>
         </nav>
     </header>
@@ -20,8 +24,9 @@
 // Components
 import TheLogo from './TheLogo.vue';
 // Img
-import url_iconDark from '@/assets/themes/theme-dark.svg';
-import url_iconWhite from '@/assets/themes/theme-white.svg';
+import urlIconDark from '@/assets/themes/theme-dark.svg';
+import urlIconWhite from '@/assets/themes/theme-white.svg';
+import { useDark, useToggle } from '@vueuse/core';
 
 export default {
     name: 'TheNav',
@@ -30,15 +35,15 @@ export default {
     },
     data() {
         return {
-            isDarkMode: true,
+            isDarkMode: false,
             links: {
                 'Characters': '#characters',
                 'Episodes': '#episodes',
                 'Location': '#location'
             },
             themeIcon: {
-                dark: url_iconDark,
-                white: url_iconWhite,
+                dark: urlIconDark,
+                white: urlIconWhite,
                 alt: "Theme's Icon"
             }
         };
@@ -47,13 +52,27 @@ export default {
         currentTheme() {
             return this.isDarkMode ? this.themeIcon.dark : this.themeIcon.white;
         }
+    },
+    setup() {
+    const isDark = useDark({
+      selector: "body",
+      attribute: "theme",
+      valueDark: "dark",
+      valueLight: "light"
+    });
+    const toggleTheme = useToggle(isDark);
+
+    return {
+      isDark,
+      toggleTheme
     }
+  }
 }
 
 </script>
 
 <!-- Nav Style -->
-<style>
+<style scoped>
 header,
 nav,
 .right-side,
@@ -71,8 +90,9 @@ header {
 
 header,
 nav {
-    background: var(--clr-green-dark);
+    background: var(--bg);
     justify-content: space-between;
+    border-bottom: 0.25px solid var(--border);
 }
 
 nav {
@@ -89,11 +109,11 @@ nav {
 }
 
 .right-side ul li a {
-    color: var(--clr-white);
+    color: var(--text-clr);
 }
 
 .right-side ul li a:hover {
-    color: var(--clr-green);
+    color: var(--nav-text-clr-hv);
 }
 
 nav img:last-child {
@@ -108,4 +128,4 @@ nav img:last-child:hover {
 nav img:last-child {
     transition: 0.3s;
 }
-</style>./TheLogo.vue
+</style>

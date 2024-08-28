@@ -1,7 +1,7 @@
 <!-- The Title HTML -->
 <template>
     <div :class="['title', dir, vertDown]">
-        <h2 :class="color"> 
+        <h2> 
             {{ title }}<strong>{{ point }}</strong> 
         </h2>
         <img :src="img" :alt="altText" />
@@ -27,16 +27,13 @@ export default {
             required: false,
             default: ''
         },
+        // pontuation
         point: {
             type: String,
             required: false,
             default: ''
         },
-        color: {
-            type: String,
-            required: false,
-            default: 'black'
-        },
+        // diretion of img
         dir: {
             type: String,
             required: false,
@@ -53,15 +50,16 @@ export default {
 </script>
 
 <!-- The Title Style -->
-<style>
+<style scoped>
 .title {
     position: relative; 
 }
 
 .title h2 {
-    font-size: 4rem;
+    font-size: 3rem;
     z-index: 2;
     position: relative;
+    color: var(--text-clr);
 }
 
 .title h2 strong {
@@ -70,16 +68,15 @@ export default {
 
 .title img {
     position: absolute;
+    width: 100%;
+    max-width: 70px;
+    min-width: 50px;
     left: -2em;
     bottom: 0em;
     z-index: 1;
 }
 
 .left.title img { left: -2em; }
-.right.title img { left: 13em; }
-.vertDown.title img { bottom: -2em; }
-
-.black { color: var(--clr-black); }
-.white { color: var(--clr-white); }
-
+.right.title img { left: 11em; }
+/* .vertDown.title img { bottom: -2em; } */
 </style>

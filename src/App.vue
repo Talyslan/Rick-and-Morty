@@ -9,7 +9,7 @@
 <script>
 import TheFooter from './components/common/TheFooter.vue';
 import TheNav from './components/common/TheNav.vue';
-
+import { useDark, useToggle } from '@vueuse/core';
 
 export default {
   name: 'App',
@@ -21,16 +21,19 @@ export default {
 </script>
 
 <!-- App Style -->
-<style>
+<style scoped>
 #app {
   /* font-family: Avenir, Helvetica, Arial, sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#app h1 {
-  text-align: center;
-  color: #ffff;
-  text-transform: uppercase;
+h1 {
+  padding: 3em;
+  font-size: 5rem;
+}
+
+button {
+  background: red;
 }
 </style>

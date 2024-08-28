@@ -8,7 +8,6 @@
             :img="episodesIcon"
             altText="Title of Episodes Section" 
             dir="right" 
-            vertDown="vertDown" 
         />
 
         <div class="episodes__content">
@@ -20,7 +19,7 @@
                     laudantium nemo aut unde. Aliquid alias maxime, doloremque minima reiciendis ullam ipsam iure beatae
                     aperiam eveniet blanditiis?
                 </p>
-                <TheButton text="See more!" bg="bg-black" txt="txt-white" />
+                <TheButton text="See more!" />
             </div>
         </div>
     </section>
@@ -49,11 +48,7 @@ export default {
 </script>
 
 <!-- The Episodes Style -->
-<style>
-.episodes {
-    background: var(--clr-white);
-}
-
+<style scoped>
 .episodes__content {
     margin-top: 2em;
     width: 100%;
@@ -64,6 +59,8 @@ export default {
 
 .episodes__content img {
     width: 50%;
+    max-width: 600px;
+    min-width: 150px;
     filter: drop-shadow(0 2em 0 var(--clr-green));
 }
 
@@ -77,5 +74,6 @@ export default {
 .episodes__content .right-side p {
     width: 30ch;
     font-size: 1.5rem;
+    color: var(--text-clr);
 }
 </style>

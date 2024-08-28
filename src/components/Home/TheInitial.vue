@@ -36,8 +36,7 @@ export default {
 </script>
 
 <!-- The Initial Style -->
-<style>
-
+<style scoped>
 .initial {
     background: var(--clr-white);
     display: flex;
@@ -105,6 +104,7 @@ export default {
 
 .initial__text .item p {
     width: 30ch;
+    color: var(--text-clr);
 }
 
 </style>

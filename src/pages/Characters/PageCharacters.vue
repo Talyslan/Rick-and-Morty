@@ -20,4 +20,4 @@ export default {
 </script>
 
 <!-- PageCharacters Style -->
-<style></style>
+<style scoped></style>

@@ -8,18 +8,18 @@
 <!-- The Logo Script -->
  <script>
 //  Img
-import url_logoDark from '@/assets/logos/logo-white.svg';
-import url_logoWhite from '@/assets/logos/logo-dark.svg';
+import urlLogoDark from '@/assets/logos/logo-white.svg';
+import urlLogoWhite from '@/assets/logos/logo-dark.svg';
 
 export default {
     name: "TheLogo",
     data() {
         return {
-            isDarkMode: true,
+            isDarkMode: false,
             logo: {
                 img: {
-                    dark: url_logoDark, 
-                    white: url_logoWhite
+                    dark: urlLogoDark, 
+                    white: urlLogoWhite
                 },
                 alt: "Rick and Morty's Logo"
             }
@@ -35,13 +35,15 @@ export default {
 </script>
 
  <!-- The Logo Style -->
-<style>
+<style scoped>
 
 .logo img {
     width: 90%; 
     cursor: pointer;
     transition: 0.3s;
 }
-.logo img:hover { transform: scale(1.01); }
+.logo img:hover { 
+    transform: scale(1.01); 
+}
 
 </style>

@@ -3,8 +3,7 @@
     <section class="characters" id="characters">
         <TheTitle 
             title="Characters" 
-            point="." 
-            color="white" 
+            point="."
             :img="characterIcon"
             altText="Title of Character Section" 
         />
@@ -19,7 +18,7 @@
             />
         </div>
 
-        <TheButton text="See more!" bg="bg-green" txt="txt-black" />
+        <TheButton text="See more!" isGreen="true" />
     </section>
 </template>
 
@@ -73,7 +72,7 @@ export default {
 </script>
 
 <!-- The Caracters Style -->
-<style>
+<style scoped>
 .characters {
     display: flex;
     flex-direction: column;

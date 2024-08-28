@@ -43,10 +43,9 @@ export default {
 </script>
 
 <!-- The Project Style -->
-<style>
-
+<style scoped>
 .project {
-    background: var(--clr-white);
+    /* background: var(--section-bg); */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,6 +62,7 @@ export default {
 .project .text p {
     width: 40ch;
     font-size: 1.2rem;
+    color: var(--text-clr);
 }
 
 .project > img {

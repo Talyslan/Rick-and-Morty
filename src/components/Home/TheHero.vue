@@ -27,13 +27,13 @@ export default {
 </script>
 
 <!-- Header Style -->
-<style>
-
+<style scoped>
 .hero {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 5em 0 3em 0;
+    background: var(--clr-black);
 }
 
 .hero img:nth-child(1) { width: 50%; }
